@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{142:function(e,p,i){"use strict";i.r(p);var n=i(149);p.default=n.b.div.withConfig({displayName:"style",componentId:"sc-1ddw9pg-0"})(["p{white-space:pre-line;}"])}}]);
+//# sourceMappingURL=component---src-pages-style-js-02a43db60a4dcdf78c1b.js.map
