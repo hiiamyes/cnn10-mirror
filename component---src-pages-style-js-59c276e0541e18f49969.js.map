@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/style.js"],"names":["styled","div","_templateObject"],"mappings":"uOAEeA,cAAOC,IAAtBC","file":"component---src-pages-style-js-59c276e0541e18f49969.js","sourcesContent":["import styled from \"styled-components\"\n\nexport default styled.div`\n  p {\n    white-space: pre-line;\n  }\n`\n"],"sourceRoot":""}
