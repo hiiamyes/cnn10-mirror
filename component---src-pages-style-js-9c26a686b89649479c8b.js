@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{144:function(t,i,n){"use strict";n.r(i);var o=n(169);i.default=o.b.div.withConfig({displayName:"style",componentId:"sc-1ddw9pg-0"})(["p{white-space:pre-line;}.font-size-buttons{position:fixed;bottom:15px;right:15px;> button:nth-of-type(1){margin-right:5px;}}"])}}]);
+//# sourceMappingURL=component---src-pages-style-js-9c26a686b89649479c8b.js.map
