@@ -1,0 +1,1 @@
+docker logs practice-02 -f

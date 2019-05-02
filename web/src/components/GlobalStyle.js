@@ -1,11 +1,11 @@
-import { createGlobalStyle } from "styled-components"
-import "normalize.css"
+import { createGlobalStyle } from 'styled-components';
+import 'normalize.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+    font-size: ${props => `${props.fontSize}px`} !important;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

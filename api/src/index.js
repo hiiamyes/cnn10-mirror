@@ -6,7 +6,10 @@ const { compose, map, orderBy } = require("lodash/fp");
 
 var Promise = require("bluebird");
 Promise.promisifyAll(redis);
-redisClient = redis.createClient({ port: process.env.REDIS_PORT });
+redisClient = redis.createClient({
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT
+});
 
 const typeDefs = gql`
   type Transcript {
@@ -37,9 +40,10 @@ const resolvers = {
     },
     transcripts: async () => {
       const keys = await redisClient.keysAsync(`transcript:*`);
-      const transcripts = (await redisClient.mgetAsync(keys)).map(transcript =>
-        JSON.parse(transcript)
-      );
+      const transcripts = compose(
+        orderBy(["date"], ["desc"]),
+        map(transcript => JSON.parse(transcript))
+      )(await redisClient.mgetAsync(keys));
       return transcripts;
     }
   }

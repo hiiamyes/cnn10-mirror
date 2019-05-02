@@ -11,6 +11,8 @@ redisClient = redis.createClient({ port: process.env.REDIS_PORT });
 async function getTranscript() {
   try {
     const date = moment().format("YYYY-MM-DD");
+    // const date = "2019-05-01";
+    // http://transcripts.cnn.com/TRANSCRIPTS/1904/22/sn.01.html
     const url = `http://transcripts.cnn.com/TRANSCRIPTS/${moment(date).format(
       "YYMM/DD"
     )}/sn.01.html`;

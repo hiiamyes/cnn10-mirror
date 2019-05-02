@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon src/index.js",
+    "docker:build": "docker build -t cnn10-api .",
+    "docker:run": "docker run -d --name cnn10-api -p 4000:4000 -v $(pwd)/src:/api/src --env-file .env.docker cnn10-api",
+    "logs": "docker logs cnn10-api -f",
     "fetch-data": "node fetchData.js"
   },
   "dependencies": {
